@@ -42,6 +42,11 @@ Under the clinical guidance of **Dr. Ch. Ravi Kumar, M.D. (Homeopathic Physician
 - **Quick Action Interfaces**:
   - **Desktop**: Fixed vertical action rail on right edge (Call, WhatsApp, Appointment Modal, Scroll to Top).
   - **Mobile**: Sticky bottom action bar for quick calls, appointments, and WhatsApp.
+- **YouTube Clinical Case Video Gallery (`#gallery`)**:
+  - Embedded responsive player featuring the top 10 most viewed patient case studies from official channel [@kalyanHomoeoCare](https://www.youtube.com/@kalyanHomoeoCare).
+  - Autoplays muted by default with full YouTube player controls and browser audio policy compliance.
+  - Interactive direct buttons: "Watch Directly on YouTube", "Share / Copy Link", and direct channel subscription link.
+  - Dual tabs switching between authentic clinic photos and clinical recovery case studies.
 - **SEO & Performance**:
   - XML Sitemap (`public/sitemap.xml`) indexing all routes and service disciplines.
   - `MedicalClinic` and `Physician` JSON-LD structured data for Google Rich Results.
