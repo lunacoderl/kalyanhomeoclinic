@@ -75,7 +75,7 @@ export const AboutSection: React.FC = () => {
             </div>
 
             <p className="text-base text-text-secondary leading-relaxed">
-              Kalyan Homeo Care is one of the trusted and well-established homeopathy clinics in Visakhapatnam. Since 2008, under the clinical leadership of <strong className="text-forest font-semibold">{siteConfig.doctor.name}, {siteConfig.doctor.qualification}</strong>, we have been providing gentle, safe, and effective homeopathic care for a wide range of acute and chronic health conditions with a patient-centric, empathetic approach.
+              Kalyan Homeo Care is one of the trusted and well-established homeopathy clinics in Visakhapatnam. Since 2008, under the clinical leadership of <strong className="text-forest font-semibold">Dr. Ch. Ravi Kumar, M.D.</strong> alongside senior physicians <strong className="text-forest font-semibold">Dr. Sudhakar, MD (Hom.)</strong> and <strong className="text-forest font-semibold">Dr. Shweta, BHMS</strong>, we have been providing gentle, safe, and effective homeopathic care for a wide range of acute and chronic health conditions with a patient-centric, empathetic approach.
             </p>
 
             <p className="text-sm text-text-muted leading-relaxed">

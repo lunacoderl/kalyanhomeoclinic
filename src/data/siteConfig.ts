@@ -1,3 +1,5 @@
+import { doctorsData, type DoctorItem } from './doctors';
+
 export interface SiteConfig {
   name: string;
   tagline: string;
@@ -10,6 +12,7 @@ export interface SiteConfig {
     image: string;
     bio: string;
   };
+  doctors: DoctorItem[];
   phone: string;
   phoneDisplay: string;
   whatsappNumber: string;
@@ -33,6 +36,7 @@ export const siteConfig: SiteConfig = {
     image: "/ravikumar.webp",
     bio: "Dr. Ch. Ravi Kumar, M.D., is a dedicated Homeopathic Physician with extensive clinical experience in individualized constitutional homeopathy. Known for his compassionate patient listening, in-depth case analysis, and gentle holistic care, he has guided thousands of families across Visakhapatnam toward enduring health and vitality."
   },
+  doctors: doctorsData,
   phone: "08008300155",
   phoneDisplay: "080083 00155",
   whatsappNumber: "918008300155",

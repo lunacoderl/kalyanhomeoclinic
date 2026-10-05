@@ -3,6 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 import { Hero } from '../components/home/Hero';
 import { ProofStrip } from '../components/home/ProofStrip';
 import { AboutSection } from '../components/home/AboutSection';
+import { DoctorsTeamSection } from '../components/home/DoctorsTeamSection';
 import { ServicesPreview } from '../components/home/ServicesPreview';
 import { WhyChooseUs } from '../components/home/WhyChooseUs';
 import { BranchSection } from '../components/home/BranchSection';
@@ -30,7 +31,10 @@ export const HomePage: React.FC = () => {
       {/* 03. About Kalyan Homeo Care */}
       <AboutSection />
 
-      {/* 04. Core Services Preview (6 cards) */}
+      {/* 04. Expert Doctors Team (Dr. Ch. Ravi Kumar, Dr. Sudhakar, Dr. Shweta) */}
+      <DoctorsTeamSection />
+
+      {/* 05. Core Services Preview (6 cards) */}
       <ServicesPreview />
 
       {/* 05. Why Choose Us with family protection visual */}

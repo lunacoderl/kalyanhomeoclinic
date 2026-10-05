@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageCircle, MapPin, Clock, Calendar, Navigation, CheckCircle2, ExternalLink } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Clock, Calendar, Navigation, CheckCircle2, ExternalLink, Stethoscope } from 'lucide-react';
 import { branchesData } from '../data/branches';
+import { doctorsData } from '../data/doctors';
 import { siteConfig, getWhatsAppLink } from '../data/siteConfig';
 import { FAQAccordion } from '../components/common/FAQAccordion';
 
 export const ContactPage: React.FC = () => {
   const [selectedBranchId, setSelectedBranchId] = useState(branchesData[0].id);
+  const [selectedDoctorId, setSelectedDoctorId] = useState(doctorsData[0].id);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [concern, setConcern] = useState('');
@@ -18,10 +20,11 @@ export const ContactPage: React.FC = () => {
   }, []);
 
   const selectedBranch = branchesData.find(b => b.id === selectedBranchId) || branchesData[0];
+  const selectedDoctor = doctorsData.find(d => d.id === selectedDoctorId) || doctorsData[0];
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const formatted = `Hello Kalyan Homeo Care,\n\nI would like to enquire about a consultation with Dr. Ch. Ravi Kumar, M.D.\n\n• Name: ${name}\n• Phone: ${phone}\n• Preferred Branch: ${selectedBranch.name} (${selectedBranch.badge})\n• Preferred Contact: ${preferredContact}\n• Concern/Reason: ${concern || 'General Enquiry'}\n• Message: ${messageText || 'None'}\n\nPlease let me know the consultation timings.`;
+    const formatted = `Hello Kalyan Homeo Care,\n\nI would like to enquire about a consultation.\n\n• Preferred Doctor: ${selectedDoctor.name}, ${selectedDoctor.degree} (${selectedDoctor.role})\n• Patient Name: ${name}\n• Phone: ${phone}\n• Preferred Branch: ${selectedBranch.name} (${selectedBranch.badge})\n• Preferred Contact: ${preferredContact}\n• Concern/Reason: ${concern || 'General Enquiry'}\n• Message: ${messageText || 'None'}\n\nPlease let me know the available consultation timings.`;
 
     const waUrl = getWhatsAppLink(formatted);
     window.open(waUrl, '_blank', 'noopener,noreferrer');
@@ -272,50 +275,89 @@ export const ContactPage: React.FC = () => {
             {/* Left 5 cols: Doctor Spotlight & Clinic Info */}
             <div className="lg:col-span-5 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mint border border-green/30 text-green text-xs font-bold tracking-wide uppercase">
-                Meet Dr. Ch. Ravi Kumar
+                Meet Our Medical Team
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-serif font-bold text-forest leading-tight">
-                Connect With Dr. Ch. Ravi Kumar, M.D.
+                Connect With Our Doctors
               </h2>
 
               <p className="text-sm text-text-secondary leading-relaxed">
-                For consultation enquiries, contact Kalyan Homeo Care through the clinic's phone or WhatsApp channel. Dr. Ch. Ravi Kumar conducts in-depth constitutional case analysis for patients across all three clinic branches in Visakhapatnam.
+                Consult with our experienced homeopathic doctors across all three clinic branches in Visakhapatnam. Click a doctor to select them for your consultation enquiry:
               </p>
 
-              <div className="bg-white rounded-3xl p-6 border border-border/80 shadow-md space-y-4">
-                <div className="flex items-center gap-4">
-                  <img
-                    src={siteConfig.doctor.image}
-                    alt="Dr. Ch. Ravi Kumar, M.D."
-                    className="w-16 h-16 rounded-2xl object-cover border border-green/30"
-                  />
-                  <div>
-                    <h3 className="font-serif font-bold text-lg text-forest">{siteConfig.doctor.name}</h3>
-                    <span className="text-xs text-text-secondary font-medium">{siteConfig.doctor.qualification} • {siteConfig.doctor.role}</span>
-                  </div>
-                </div>
+              {/* 3 Doctor Cards */}
+              <div className="space-y-3">
+                {doctorsData.map((doc) => {
+                  const isSelected = doc.id === selectedDoctorId;
+                  return (
+                    <div
+                      key={doc.id}
+                      onClick={() => setSelectedDoctorId(doc.id)}
+                      className={`cursor-pointer p-4 rounded-2xl border transition-all flex items-center gap-4 ${
+                        isSelected
+                          ? 'bg-white border-forest ring-2 ring-forest/30 shadow-md'
+                          : 'bg-white/80 border-border/80 hover:border-forest/40 hover:bg-white'
+                      }`}
+                    >
+                      <img
+                        src={doc.image}
+                        alt={`${doc.name}, ${doc.degree}`}
+                        className="w-16 h-16 rounded-2xl object-cover object-top border border-green/30 shrink-0"
+                      />
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-1">
+                          <h4 className="font-serif font-bold text-forest text-base truncate">
+                            {doc.name}
+                          </h4>
+                          <span className="px-2 py-0.5 rounded-md bg-forest/10 text-forest text-[10px] font-bold shrink-0">
+                            {doc.qualification}
+                          </span>
+                        </div>
+                        <p className="text-xs text-text-secondary truncate mt-0.5">
+                          {doc.role}
+                        </p>
+                        <p className="text-[11px] text-text-muted mt-1 flex items-center gap-1">
+                          <MapPin className="w-3 h-3 text-green shrink-0" />
+                          <span className="truncate">{doc.branches.join(', ')}</span>
+                        </p>
+                      </div>
 
-                <div className="space-y-2 text-xs text-text-secondary pt-2 border-t border-border">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green shrink-0" />
-                    <span>In-depth constitutional case taking</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green shrink-0" />
-                    <span>Serving Dwaraka Nagar, Old Gajuwaka & Steel Plant</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-green shrink-0" />
-                    <span>Safe for infants, adults, and senior citizens</span>
-                  </div>
+                      <div className="shrink-0">
+                        {isSelected ? (
+                          <div className="w-6 h-6 rounded-full bg-forest text-white flex items-center justify-center">
+                            <CheckCircle2 className="w-4 h-4" />
+                          </div>
+                        ) : (
+                          <div className="w-6 h-6 rounded-full border border-border flex items-center justify-center text-text-muted text-[10px]">
+                            •
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Clinic Assurance */}
+              <div className="p-4 rounded-2xl bg-white border border-border/80 text-xs text-text-secondary space-y-1.5 shadow-xs">
+                <div className="flex items-center gap-2 text-forest font-semibold">
+                  <CheckCircle2 className="w-4 h-4 text-green shrink-0" />
+                  <span>Serving Dwaraka Nagar, Old Gajuwaka & Steel Plant</span>
                 </div>
+                <p className="text-[11px] text-text-muted pl-6">
+                  Every consultation includes in-depth constitutional analysis tailored specifically to you.
+                </p>
               </div>
             </div>
 
             {/* Right 7 cols: Appointment Enquiry Form */}
             <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-border/80">
               <div className="space-y-2 mb-6">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-mint text-forest text-xs font-bold">
+                  <span>Selected Doctor:</span>
+                  <span className="text-green font-extrabold">{selectedDoctor.name}, {selectedDoctor.degree}</span>
+                </div>
                 <h3 className="text-2xl font-serif font-bold text-forest">
                   Book an Appointment Enquiry
                 </h3>
@@ -334,6 +376,25 @@ export const ContactPage: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-4">
+                  {/* Preferred Doctor Selector */}
+                  <div>
+                    <label className="block text-xs font-bold text-text-secondary mb-1">Preferred Doctor *</label>
+                    <div className="relative">
+                      <Stethoscope className="absolute left-3.5 top-3.5 w-4 h-4 text-text-muted" />
+                      <select
+                        value={selectedDoctorId}
+                        onChange={e => setSelectedDoctorId(e.target.value)}
+                        className="w-full pl-10 pr-4 py-3 rounded-xl border border-border bg-ivory/50 focus:border-green focus:outline-hidden text-sm font-medium"
+                      >
+                        {doctorsData.map(d => (
+                          <option key={d.id} value={d.id}>
+                            {d.name}, {d.degree} — {d.role}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-text-secondary mb-1">Patient Name *</label>

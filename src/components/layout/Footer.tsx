@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-xs text-mint/80 leading-relaxed">
-              Personalized homeopathic care led by <strong className="text-white font-semibold">{siteConfig.doctor.name}, {siteConfig.doctor.qualification}</strong>. Serving local families across Visakhapatnam with dedicated clinical listening and gentle remedies.
+              Personalized homeopathic care led by <strong className="text-white font-semibold">Dr. Ch. Ravi Kumar, M.D.</strong> alongside senior physicians <strong className="text-white font-semibold">Dr. Sudhakar, MD (Hom.)</strong> and <strong className="text-white font-semibold">Dr. Shweta, BHMS</strong>. Serving local families across Visakhapatnam with dedicated clinical listening and gentle remedies.
             </p>
 
             <div className="pt-2 flex items-center gap-3">
@@ -91,6 +91,9 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="/#about" className="hover:text-white transition-colors">About Kalyan Homeo Care</a>
+              </li>
+              <li>
+                <a href="/#doctors" className="hover:text-white transition-colors text-gold font-semibold">Our Doctors Team</a>
               </li>
               <li>
                 <Link to="/services" className="hover:text-white transition-colors">Homeopathic Services</Link>

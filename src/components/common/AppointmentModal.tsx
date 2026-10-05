@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
-import { X, Calendar, MessageSquare, Phone, User, MapPin } from 'lucide-react';
+import { X, Calendar, MessageSquare, Phone, User, MapPin, Stethoscope } from 'lucide-react';
 import { branchesData } from '../../data/branches';
 import { siteConfig, getWhatsAppLink } from '../../data/siteConfig';
+import { doctorsData } from '../../data/doctors';
 
 interface AppointmentModalProps {
   isOpen: boolean;
   onClose: () => void;
   preselectedBranch?: string;
   preselectedConcern?: string;
+  preselectedDoctor?: string;
 }
 
 export const AppointmentModal: React.FC<AppointmentModalProps> = ({
   isOpen,
   onClose,
   preselectedBranch,
-  preselectedConcern
+  preselectedConcern,
+  preselectedDoctor
 }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [doctor, setDoctor] = useState(preselectedDoctor || 'Dr. Ch. Ravi Kumar, M.D.');
   const [branch, setBranch] = useState(preselectedBranch || 'dwaraka-nagar');
   const [concern, setConcern] = useState(preselectedConcern || '');
   const [preferredDay, setPreferredDay] = useState('');
@@ -28,7 +32,7 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const selectedBranchObj = branchesData.find(b => b.id === branch) || branchesData[0];
-    const message = `Hello Kalyan Homeo Care,\n\nI would like to book a consultation with Dr. Ch. Ravi Kumar, M.D.\n\n• Name: ${name || 'Patient'}\n• Phone: ${phone || 'Not provided'}\n• Preferred Branch: ${selectedBranchObj.name} (${selectedBranchObj.badge})\n• Health Concern: ${concern || 'General Consultation'}\n• Preferred Day/Time: ${preferredDay || 'Earliest available'}\n\nPlease let me know the available consultation slot.`;
+    const message = `Hello Kalyan Homeo Care,\n\nI would like to book a consultation.\n\n• Preferred Doctor: ${doctor}\n• Name: ${name || 'Patient'}\n• Phone: ${phone || 'Not provided'}\n• Preferred Branch: ${selectedBranchObj.name} (${selectedBranchObj.badge})\n• Health Concern: ${concern || 'General Consultation'}\n• Preferred Day/Time: ${preferredDay || 'Earliest available'}\n\nPlease let me know the available consultation slot.`;
 
     const waUrl = getWhatsAppLink(message);
     window.open(waUrl, '_blank', 'noopener,noreferrer');
@@ -59,7 +63,9 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
           </div>
           <div>
             <span className="text-xs font-bold tracking-widest text-green uppercase">Book Consultation</span>
-            <h3 className="text-2xl font-serif font-bold text-text-primary">Consult Dr. Ch. Ravi Kumar</h3>
+            <h3 className="text-2xl font-serif font-bold text-text-primary">
+              {doctor ? `Consult ${doctor.split(' ')[1] || doctor}` : 'Book Doctor Consultation'}
+            </h3>
           </div>
         </div>
 
@@ -75,6 +81,25 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-xs font-bold text-text-secondary mb-1">Select Preferred Doctor</label>
+              <div className="relative">
+                <Stethoscope className="absolute left-3.5 top-3.5 w-4 h-4 text-text-muted" />
+                <select
+                  value={doctor}
+                  onChange={e => setDoctor(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 rounded-xl border border-border focus:border-green focus:outline-hidden text-sm bg-ivory/50"
+                >
+                  <option value="Any Available Senior Doctor">Any Available Senior Doctor</option>
+                  {doctorsData.map(d => (
+                    <option key={d.id} value={`${d.name}, ${d.degree}`}>
+                      {d.name}, {d.degree} ({d.role})
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
             <div>
               <label className="block text-xs font-bold text-text-secondary mb-1">Your Full Name</label>
               <div className="relative">

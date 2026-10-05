@@ -14,7 +14,15 @@
 
 **Kalyan Homeo Care** is a trusted homeopathic clinic network in Visakhapatnam, Andhra Pradesh, providing gentle, non-invasive constitutional healthcare since 2008.
 
-Under the clinical guidance of **Dr. Ch. Ravi Kumar, M.D. (Homeopathic Physician)**, the clinic offers holistic, individualized treatments treating root causation for acute and chronic conditions without harsh synthetic side effects.
+Under the clinical guidance of **Dr. Ch. Ravi Kumar, M.D.** alongside senior physicians **Dr. Sudhakar, MD (Hom.)** and **Dr. Shweta, BHMS**, the clinic offers holistic, individualized treatments treating root causation for acute and chronic conditions without harsh synthetic side effects.
+
+### 👨‍⚕️ Medical Leadership & Doctors Team
+
+| Doctor | Qualification | Role | Experience | Key Focus Areas |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dr. Ch. Ravi Kumar** | M.D. (Hom.) | Chief Physician & Founder | 17+ Years | Chronic & Autoimmune Diseases, Constitutional Repertorization, Severe Joint & Skin Disorders |
+| **Dr. Sudhakar** | MD (Hom.) | Senior Consultant Physician | 14+ Years | Metabolic & Digestive Health, Spine/Joint Pain, Renal & Respiratory Care |
+| **Dr. Shweta** | BHMS | Consultant Homeopath | 8+ Years | Women's Health (PCOD/PCOS, Thyroid), Pediatric Care, Allergic Rhinitis, Skin Wellness |
 
 ### 📍 Clinic Branches
 

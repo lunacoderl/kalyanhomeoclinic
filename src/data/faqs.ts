@@ -53,5 +53,11 @@ export const generalFaqs: FAQ[] = [
     question: "How does homeopathic treatment work?",
     answer: "Homeopathy follows the constitutional principle of 'like cures like' (Similia Similibus Curentur), stimulating the body's natural defense mechanisms and immune vitality through personalized, micro-diluted remedies.",
     category: "About Homeopathy"
+  },
+  {
+    id: "faq-9",
+    question: "Who are the doctors at Kalyan Homeo Care?",
+    answer: "Kalyan Homeo Care is led by Founder & Chief Physician Dr. Ch. Ravi Kumar, M.D. (17+ years experience) alongside Senior Consultant Dr. Sudhakar, MD (Hom.) (14+ years experience) and Consultant Homeopath Dr. Shweta, BHMS (8+ years experience). Together they provide comprehensive constitutional care for all age groups across our Visakhapatnam branches.",
+    category: "Doctors"
   }
 ];

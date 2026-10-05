@@ -23,9 +23,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookModal }) => {
   const navLinks = [
     { label: 'Home', to: '/' },
     { label: 'About', to: '/#about' },
-    { label: 'Testimonials', to: '/#testimonials' },
-    { label: 'Branches', to: '/#branches' },
+    { label: 'Doctors', to: '/#doctors' },
     { label: 'Services', to: '/services' },
+    { label: 'Branches', to: '/#branches' },
     { label: 'Gallery', to: '/#gallery' },
     { label: 'Reviews', to: '/#testimonials' },
     { label: 'Contact', to: '/contact' }
