@@ -11,7 +11,7 @@ export const AppLayout: React.FC = () => {
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-ivory text-text-primary relative selection:bg-mint selection:text-forest w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-ivory text-text-primary relative selection:bg-mint selection:text-forest w-full max-w-full">
       {/* Top Sticky Header */}
       <Navbar onOpenBookModal={() => setIsBookModalOpen(true)} />
 

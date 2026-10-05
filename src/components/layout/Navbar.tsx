@@ -46,6 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookModal }) => {
 
   return (
     <header
+      style={{ position: 'sticky', top: 0 }}
       className={`sticky top-0 z-[900] w-full transition-all duration-300 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-md shadow-xs py-2'
