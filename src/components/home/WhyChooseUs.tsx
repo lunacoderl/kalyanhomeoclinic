@@ -31,8 +31,8 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-cream/70 relative z-10 border-b border-border/70 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 lg:py-28 bg-cream/70 relative z-10 border-b border-border/70 overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Why Choose Us Content & 5 Points */}
           <div className="lg:col-span-7 space-y-6">
@@ -74,9 +74,8 @@ export const WhyChooseUs: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Cupped hands family protective motif */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-br from-amber-50 via-emerald-50 to-green-100 p-8 sm:p-10 flex flex-col items-center justify-center min-h-[440px] text-center">
+          <div className="lg:col-span-5 relative w-full max-w-full">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-br from-amber-50 via-emerald-50 to-green-100 p-5 sm:p-10 flex flex-col items-center justify-center min-h-[380px] sm:min-h-[440px] text-center max-w-full">
               {/* Decorative sunburst glow */}
               <div className="absolute inset-0 bg-radial from-amber-200/40 via-transparent to-transparent pointer-events-none" />
 

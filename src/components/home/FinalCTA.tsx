@@ -5,12 +5,12 @@ import { getWhatsAppLink } from '../../data/siteConfig';
 
 export const FinalCTA: React.FC = () => {
   return (
-    <section className="py-16 lg:py-24 relative z-10 bg-gradient-to-r from-mint via-sage/30 to-mint border-b border-border/80 overflow-hidden">
+    <section className="py-16 lg:py-24 relative z-10 bg-gradient-to-r from-mint via-sage/30 to-mint border-b border-border/80 overflow-hidden w-full max-w-full">
       {/* Decorative leaf motifs */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-green/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-forest/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: CTA Content */}
           <div className="lg:col-span-8 space-y-5">

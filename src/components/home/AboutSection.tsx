@@ -31,11 +31,11 @@ export const AboutSection: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-20 lg:py-28 bg-ivory relative z-10 border-b border-border/70">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 lg:py-28 bg-ivory relative z-10 border-b border-border/70 overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Natural Remedies Visual & Cursive Sticker */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative max-w-full">
             <div className="relative rounded-3xl overflow-hidden shadow-xl border border-border/80 bg-white">
               <img
                 src="/services/service-12.webp"
@@ -51,10 +51,10 @@ export const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Circular "Since 2008 Serving Vizag" Badge */}
-            <div className="absolute -bottom-6 -right-4 sm:right-6 w-28 h-28 rounded-full bg-forest text-white p-2 shadow-2xl flex flex-col items-center justify-center text-center border-4 border-white animate-spin-slow">
+            {/* Circular "Since 2008 Serving Vizag" Badge - safely positioned inside mobile container */}
+            <div className="absolute bottom-2 right-2 sm:-bottom-6 sm:right-6 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-forest text-white p-2 shadow-2xl flex flex-col items-center justify-center text-center border-4 border-white animate-spin-slow">
               <span className="text-[10px] uppercase font-bold tracking-wider text-mint/80">Since</span>
-              <span className="font-serif font-bold text-2xl text-gold leading-none">2008</span>
+              <span className="font-serif font-bold text-xl sm:text-2xl text-gold leading-none">2008</span>
               <span className="text-[9px] font-semibold text-mint/90 tracking-tight leading-tight mt-0.5">Serving Vizag</span>
             </div>
           </div>

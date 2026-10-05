@@ -54,12 +54,12 @@ export const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-full overflow-x-hidden">
       {/* 
         Contact Hero with full-screen fixed image (contactpage-bg.png) 
         without layered color overlay so the background image is 100% sharp and clear.
       */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-border/80">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden border-b border-border/80 w-full max-w-full">
         <div
           className="hidden lg:block absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -71,7 +71,7 @@ export const ContactPage: React.FC = () => {
         />
 
         {/* Hero Content with Light Blur Glass Container Positioned in the Right Corner */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-24 w-full flex flex-col items-end">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 lg:py-24 w-full max-w-full flex flex-col items-end">
           {/* Mobile Hero Image: full width and proportional natural height without cropping or oversizing */}
           <div className="lg:hidden w-full mb-6">
             <div className="relative w-full rounded-3xl overflow-hidden shadow-lg border border-border bg-white">
@@ -84,7 +84,7 @@ export const ContactPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="max-w-xl w-full ml-auto space-y-4 bg-white/90 lg:bg-white/80 backdrop-blur-md p-6 sm:p-9 rounded-3xl border border-white/80 shadow-xl text-left">
+          <div className="max-w-xl w-full ml-auto space-y-4 bg-white/90 lg:bg-white/80 backdrop-blur-md p-5 sm:p-9 rounded-3xl border border-white/80 shadow-xl text-left overflow-hidden">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mint border border-green/30 text-green text-xs font-bold tracking-wide uppercase">
               Get In Touch
             </div>
@@ -121,8 +121,8 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* 4 Quick Contact Cards */}
-      <section className="py-8 bg-white border-b border-border/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 bg-white border-b border-border/80 overflow-hidden w-full max-w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <a
               href={getWhatsAppLink()}
@@ -174,8 +174,8 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* Main Interactive Branch Directory & Details */}
-      <section id="branches" className="py-20 bg-ivory border-b border-border/70">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="branches" className="py-20 bg-ivory border-b border-border/70 overflow-hidden w-full max-w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
             <span className="text-xs font-bold tracking-widest text-green uppercase">Three Clinic Locations</span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-forest">
@@ -269,8 +269,8 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* Split Appointment Enquiry Section & Doctor Spotlight */}
-      <section id="appointment-form" className="py-20 bg-cream/70 border-b border-border/70">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="appointment-form" className="py-20 bg-cream/70 border-b border-border/70 overflow-hidden w-full max-w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left 5 cols: Doctor Spotlight & Clinic Info */}
             <div className="lg:col-span-5 space-y-6">
@@ -499,8 +499,8 @@ export const ContactPage: React.FC = () => {
       />
 
       {/* Stay Connected & YouTube Presence */}
-      <section className="py-14 bg-white border-t border-border/80">
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-4">
+      <section className="py-14 bg-white border-t border-border/80 overflow-hidden w-full max-w-full">
+        <div className="max-w-4xl mx-auto px-4 text-center space-y-4 w-full max-w-full">
           <span className="text-xs font-bold text-green uppercase tracking-widest">Digital Health Education</span>
           <h3 className="text-2xl sm:text-3xl font-serif font-bold text-forest">
             Stay Connected With Kalyan Homeo Care

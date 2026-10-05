@@ -52,26 +52,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookModal }) => {
           : 'bg-white/90 backdrop-blur-xs py-3'
       } border-b border-border/70`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between w-full max-w-full">
         {/* Brand Logo & Name */}
         <Link
           to="/"
-          className="flex items-center gap-3 group"
+          className="flex items-center gap-2.5 sm:gap-3 group min-w-0"
           aria-label="Kalyan Homeo Care Home"
         >
           <img
             src={siteConfig.logo}
             alt="Kalyan Homeo Care – Homeopathy Clinic in Visakhapatnam"
-            className="w-12 h-12 md:w-14 md:h-14 object-contain rounded-full shadow-xs group-hover:scale-105 transition-transform"
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain rounded-full shadow-xs group-hover:scale-105 transition-transform shrink-0"
           />
-          <div className="flex flex-col">
-            <span className="font-serif font-bold text-lg md:text-xl tracking-tight text-forest leading-none uppercase">
+          <div className="flex flex-col min-w-0">
+            <span className="font-serif font-bold text-base sm:text-lg md:text-xl tracking-tight text-forest leading-none uppercase truncate">
               Kalyan
             </span>
-            <span className="font-serif font-bold text-base md:text-lg tracking-tight text-forest leading-tight uppercase">
+            <span className="font-serif font-bold text-sm sm:text-base md:text-lg tracking-tight text-forest leading-tight uppercase truncate">
               Homeo Care
             </span>
-            <span className="text-[10px] md:text-[11px] font-sans text-green tracking-wide">
+            <span className="hidden sm:block text-[10px] md:text-[11px] font-sans text-green tracking-wide truncate">
               Rapid gentle permanent cure
             </span>
           </div>
@@ -115,10 +115,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookModal }) => {
         </div>
 
         {/* Mobile Hamburger Button */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden shrink-0">
           <button
             onClick={onOpenBookModal}
-            className="text-xs font-bold bg-green text-white px-3 py-2 rounded-full flex items-center gap-1.5"
+            className="text-xs font-bold bg-green text-white px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-full flex items-center gap-1 shadow-xs shrink-0 cursor-pointer"
           >
             <Calendar className="w-3.5 h-3.5" />
             <span>Book</span>
@@ -126,7 +126,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookModal }) => {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl text-forest hover:bg-mint transition-colors"
+            className="p-1.5 sm:p-2 rounded-xl text-forest hover:bg-mint transition-colors shrink-0 cursor-pointer"
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

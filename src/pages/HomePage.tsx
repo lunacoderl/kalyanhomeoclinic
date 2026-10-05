@@ -21,7 +21,7 @@ export const HomePage: React.FC = () => {
   const { openBookingModal } = useOutletContext<OutletContextType>();
 
   return (
-    <div className="w-full">
+    <div className="w-full max-w-full overflow-x-hidden">
       {/* 01. Hero with full-screen fixed background and Dr. Ch. Ravi Kumar, M.D. */}
       <Hero onOpenBookModal={openBookingModal} />
 

@@ -24,7 +24,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookModal }) => {
       />
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-24 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-24 w-full max-w-full overflow-hidden">
         {/* 
           Mobile Hero Image:
           Displays full width and proportional natural height without cropping or oversizing.
@@ -41,56 +41,56 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookModal }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full max-w-full">
           {/* Left Column: Heading, Badges, Text & CTAs with very light blur background container */}
-          <div className="lg:col-span-7 space-y-6 max-w-2xl bg-white/90 lg:bg-white/75 backdrop-blur-md p-6 sm:p-9 rounded-3xl border border-white/80 shadow-lg">
+          <div className="lg:col-span-7 space-y-6 max-w-2xl w-full bg-white/90 lg:bg-white/75 backdrop-blur-md p-5 sm:p-9 rounded-3xl border border-white/80 shadow-lg overflow-hidden">
             {/* Eyebrow badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mint/90 border border-green/30 text-green text-xs font-bold tracking-wide uppercase shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
-              Trusted Homeopathy Clinic in Visakhapatnam
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mint/90 border border-green/30 text-green text-xs font-bold tracking-wide uppercase shadow-xs max-w-full">
+              <span className="w-2 h-2 rounded-full bg-green animate-pulse shrink-0" />
+              <span className="truncate">Trusted Homeopathy Clinic in Visakhapatnam</span>
             </div>
 
             {/* H1 Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-serif font-bold text-forest leading-[1.15] tracking-tight">
+            <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-serif font-bold text-forest leading-[1.15] tracking-tight">
               Gentle Healing for a Healthier Tomorrow
             </h1>
 
             {/* Supporting Emotion Line & Paragraph */}
             <div className="space-y-2">
-              <p className="text-lg md:text-xl font-medium text-text-primary">
+              <p className="text-base md:text-xl font-medium text-text-primary">
                 Gentle care. Thoughtful consultation. A doctor who listens.
               </p>
-              <p className="text-sm md:text-base text-text-secondary leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-text-secondary leading-relaxed">
                 Kalyan Homeo Care provides personalized homeopathic consultations in Visakhapatnam, with convenient access through branches in Dwaraka Nagar, Old Gajuwaka and Steel Plant.
               </p>
             </div>
 
             {/* 3 Micro Benefit Pills */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
-              <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2.5 rounded-2xl bg-white/90 border border-border/80 shadow-xs">
-                <div className="w-8 h-8 rounded-full bg-mint flex items-center justify-center text-green mb-1.5">
-                  <Shield className="w-4 h-4" />
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-3 pt-2 w-full">
+              <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-2.5 rounded-2xl bg-white/90 border border-border/80 shadow-xs min-w-0">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-mint flex items-center justify-center text-green mb-1.5 shrink-0">
+                  <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
-                <span className="text-xs font-bold text-text-primary leading-tight">
-                  Natural & Safe Treatment
+                <span className="text-[10px] sm:text-xs font-bold text-text-primary leading-tight break-words">
+                  Natural & Safe Care
                 </span>
               </div>
 
-              <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2.5 rounded-2xl bg-white/90 border border-border/80 shadow-xs">
-                <div className="w-8 h-8 rounded-full bg-peach/30 flex items-center justify-center text-[#B85D38] mb-1.5">
-                  <Heart className="w-4 h-4" />
+              <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-2.5 rounded-2xl bg-white/90 border border-border/80 shadow-xs min-w-0">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-peach/30 flex items-center justify-center text-[#B85D38] mb-1.5 shrink-0">
+                  <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
-                <span className="text-xs font-bold text-text-primary leading-tight">
+                <span className="text-[10px] sm:text-xs font-bold text-text-primary leading-tight break-words">
                   Personalized Care
                 </span>
               </div>
 
-              <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2.5 rounded-2xl bg-white/90 border border-border/80 shadow-xs">
-                <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center text-gold mb-1.5">
-                  <Users className="w-4 h-4" />
+              <div className="flex flex-col items-center sm:items-start text-center sm:text-left p-2 sm:p-2.5 rounded-2xl bg-white/90 border border-border/80 shadow-xs min-w-0">
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gold/20 flex items-center justify-center text-gold mb-1.5 shrink-0">
+                  <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
-                <span className="text-xs font-bold text-text-primary leading-tight">
-                  Trusted by Thousands
+                <span className="text-[10px] sm:text-xs font-bold text-text-primary leading-tight break-words">
+                  Trusted by Many
                 </span>
               </div>
             </div>

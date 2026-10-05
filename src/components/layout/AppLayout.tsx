@@ -11,12 +11,12 @@ export const AppLayout: React.FC = () => {
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-ivory text-text-primary relative selection:bg-mint selection:text-forest">
+    <div className="min-h-screen flex flex-col bg-ivory text-text-primary relative selection:bg-mint selection:text-forest w-full max-w-full overflow-x-hidden">
       {/* Top Sticky Header */}
       <Navbar onOpenBookModal={() => setIsBookModalOpen(true)} />
 
       {/* Main Content Area */}
-      <main className="flex-1 w-full">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         <Outlet context={{ openBookingModal: () => setIsBookModalOpen(true) }} />
       </main>
 
