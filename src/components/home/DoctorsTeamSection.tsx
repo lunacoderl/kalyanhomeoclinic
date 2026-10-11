@@ -39,14 +39,14 @@ export const DoctorsTeamSection: React.FC = () => {
               Meet Our Expert Doctors
             </h2>
             <p className="text-base text-text-secondary leading-relaxed">
-              Led by founder <strong className="text-forest font-semibold">Dr. Ch. Ravi Kumar, M.D.</strong> alongside senior physicians <strong className="text-forest font-semibold">Dr. Sudhakar, MD (Hom.)</strong> and <strong className="text-forest font-semibold">Dr. Shweta, BHMS</strong>, our medical team brings decades of specialized constitutional care to Visakhapatnam.
+              Led by founder <strong className="text-forest font-semibold">Dr. Ch. Ravi Kumar, M.D.</strong> alongside senior physicians <strong className="text-forest font-semibold">Dr. Sudhakar, M.D.</strong> and <strong className="text-forest font-semibold">Dr. Shweta, M.D.</strong>, our medical team brings decades of specialized constitutional care to Visakhapatnam.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-ivory border border-border/80 text-xs font-bold text-forest shadow-xs">
               <Award className="w-4 h-4 text-gold" />
-              <span>Certified M.D. & B.H.M.S. Specialists</span>
+              <span>Certified M.D. Homeopathy Specialists</span>
             </span>
           </div>
         </div>
@@ -110,7 +110,7 @@ export const DoctorsTeamSection: React.FC = () => {
                   </div>
 
                   {/* Biography */}
-                  <p className="text-xs text-text-secondary leading-relaxed line-clamp-3">
+                  <p className="text-xs text-text-secondary leading-relaxed">
                     {doc.bio}
                   </p>
 

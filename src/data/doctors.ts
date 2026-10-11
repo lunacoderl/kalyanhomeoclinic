@@ -38,19 +38,19 @@ export const doctorsData: DoctorItem[] = [
   {
     id: "dr-sudhakar",
     name: "Dr. Sudhakar",
-    degree: "MD (Hom.)",
+    degree: "M.D.",
     qualification: "M.D. (Homeopathy)",
     role: "Senior Consultant Homeopathic Physician",
     image: "/dr-sudhakar.jpg",
     experience: "14+ Years Experience",
     specialization: [
-      "Metabolic & Digestive Disorders",
-      "Chronic Joint & Spine Pain",
-      "Renal & Respiratory Health",
-      "Constitutional Materia Medica"
+      "Constitutional Materia Medica",
+      "Perception of Patient's Mind & Temperament",
+      "Chronic Metabolic & Digestive Pathologies",
+      "Chronic Joint & Spine Disorders"
     ],
-    motto: "Homeopathy Treats the Individual, Not just the Disease — Your Health Our Priority.",
-    bio: "Senior Consultant at Kalyan Homeo Care specializing in deep Materia Medica and constitutional case evaluation. Passionate about identifying root emotional and metabolic causes, Dr. Sudhakar empowers patients to regain robust vitality naturally.",
+    motto: "Whenever the quite correctly and fittingly chosen remedy is applied and operates within the spheres, the overthrow of the disease is naturally to be expected.",
+    bio: "Dr. Sudhakar M.D. is a passionate homeopath. He is a genius who unfolded the pictures of many homeopathic remedies in a new light. His ability to perceive the patient's mind is exceptional. His experience teaches that whenever the quite correctly and fittingly chosen remedy is applied and operates within the spheres, the overthrow of the disease is naturally to be expected.",
     branches: ["Dwaraka Nagar", "Old Gajuwaka"],
     availability: "Mon – Sat (10:00 AM – 8:00 PM)",
     phone: "08008300155"
@@ -58,19 +58,19 @@ export const doctorsData: DoctorItem[] = [
   {
     id: "dr-shweta",
     name: "Dr. Shweta",
-    degree: "BHMS",
-    qualification: "B.H.M.S.",
+    degree: "M.D.",
+    qualification: "M.D. (Homeopathy)",
     role: "Consultant Homeopathic Physician",
     image: "/dr-shweta.jpg",
-    experience: "8+ Years Experience",
+    experience: "10+ Years Experience",
     specialization: [
-      "Women's Health (PCOD/PCOS & Thyroid)",
-      "Pediatric & Child Immunity",
-      "Allergic Rhinitis & Sinusitis",
-      "Gentle Lifestyle & Skin Wellness"
+      "Women's Hormonal Health (PCOD/PCOS & Thyroid)",
+      "Pediatric Constitutional Care & Child Immunity",
+      "Perception of Mind & Emotional Well-Being",
+      "Allergic Rhinitis, Sinusitis & Skin Wellness"
     ],
-    motto: "Gentle Healing • Lasting Wellness with compassionate patient-first care.",
-    bio: "Consultant Homeopath with specialized focus on female hormonal balance, pediatric constitutional care, and allergic conditions. Known for her patient, reassuring approach that creates an open, comforting healing environment for families.",
+    motto: "When the fittingly and correctly chosen remedy is applied with deep constitutional perception, the overthrow of disease and lasting vitality naturally follow.",
+    bio: "Dr. Shweta M.D. is a passionate and compassionate homeopath. She is an insightful physician who unfolds the constitutional pictures of homeopathic remedies in a luminous, empathetic light. Her ability to perceive the patient's mind, emotional depth, and subtle hormonal disharmonies is exceptional. Her experience teaches that whenever the accurately chosen remedy operates within its true spheres, the gentle overthrow of the disease is naturally to be expected.",
     branches: ["Dwaraka Nagar", "Steel Plant"],
     availability: "Mon – Sat (10:00 AM – 7:30 PM)",
     phone: "08008300155"
