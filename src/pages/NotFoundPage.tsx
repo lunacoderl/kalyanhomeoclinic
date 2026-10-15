@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Stethoscope, Phone } from 'lucide-react';
+import { SEOHead } from '../components/common/SEOHead';
 
 export const NotFoundPage: React.FC = () => {
-  useEffect(() => {
-    document.title = '404 - Page Not Found | Kalyan Homeo Care';
-  }, []);
-
   return (
     <div className="min-h-[75vh] flex items-center justify-center bg-cream/70 py-16 px-4 sm:px-6 relative overflow-hidden">
+      <SEOHead title="404 - Page Not Found | Kalyan Homeo Care" noIndex={true} />
       {/* Decorative botanical leaf blur */}
       <div className="absolute top-10 right-10 text-6xl opacity-30 select-none pointer-events-none">🌿</div>
       <div className="absolute bottom-10 left-10 text-6xl opacity-30 select-none pointer-events-none">🍃</div>
