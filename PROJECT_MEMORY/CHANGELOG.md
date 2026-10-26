@@ -2,6 +2,23 @@
 
 All notable changes, updates, fixes, and additions to this project are documented here in chronological order.
 
+## [2026-10-26] - Qualification Alignment: Dr. Shweta (BHMS)
+### Updated:
+- **`src/data/doctors.ts`**:
+  - Replaced Dr. Shweta's qualification and degree from `M.D.` / `M.D. (Homeopathy)` to `BHMS` / `B.H.M.S.`.
+  - Updated clinical bio to reflect `Dr. Shweta, BHMS`.
+- **`src/data/faqs.ts`**:
+  - Updated FAQ #9 doctor lineup to list `Consultant Homeopath Dr. Shweta, BHMS (10+ years experience)`.
+- **`src/components/home/DoctorsTeamSection.tsx`**:
+  - Updated team introduction paragraph to reference `Dr. Shweta, BHMS`.
+  - Updated badge text from `"Certified M.D. Homeopathy Specialists"` to `"Certified M.D. & B.H.M.S. Specialists"`.
+- **`src/components/home/AboutSection.tsx`**:
+  - Updated clinical leadership reference to `Dr. Shweta, BHMS`.
+- **`src/components/layout/Footer.tsx`**:
+  - Updated footer credentials to `Dr. Shweta, BHMS`.
+- **`PROJECT_MEMORY/PROJECT_STATE.md`**:
+  - Aligned Dr. Shweta's medical leadership specification to `Dr. Shweta, BHMS` (`B.H.M.S.`).
+
 ---
 
 ## [2026-10-11] - Medical Leadership Update: Dr. Sudhakar & Lady Doctor Dr. Shweta

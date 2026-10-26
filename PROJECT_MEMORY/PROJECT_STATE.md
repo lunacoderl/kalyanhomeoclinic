@@ -22,9 +22,9 @@
    - Experience: 14+ Years Experience
    - Philosophy: *"Whenever the quite correctly and fittingly chosen remedy is applied and operates within the spheres, the overthrow of the disease is naturally to be expected."*
    - Focus: Constitutional Materia Medica, Perception of Patient's Mind & Temperament, Chronic Metabolic & Digestive Pathologies, Chronic Joint & Spine Disorders
-3. **Dr. Shweta, M.D.**
+3. **Dr. Shweta, BHMS**
    - Role: Consultant Homeopathic Physician
-   - Qualification: M.D. (Homeopathy)
+   - Qualification: B.H.M.S.
    - Experience: 10+ Years Experience
    - Philosophy: *"When the fittingly and correctly chosen remedy is applied with deep constitutional perception, the overthrow of disease and lasting vitality naturally follow."*
    - Focus: Women's Hormonal Health (PCOD/PCOS & Thyroid), Pediatric Constitutional Care & Child Immunity, Perception of Mind & Emotional Well-Being, Allergic Rhinitis, Sinusitis & Skin Wellness

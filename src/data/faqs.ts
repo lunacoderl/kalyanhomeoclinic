@@ -57,7 +57,7 @@ export const generalFaqs: FAQ[] = [
   {
     id: "faq-9",
     question: "Who are the doctors at Kalyan Homeo Care?",
-    answer: "Kalyan Homeo Care is led by Founder & Chief Physician Dr. Ch. Ravi Kumar, M.D. (17+ years experience) alongside Senior Consultant Dr. Sudhakar, M.D. (14+ years experience) and Consultant Homeopath Dr. Shweta, M.D. (10+ years experience). Together they provide comprehensive constitutional care for all age groups across our Visakhapatnam branches.",
+    answer: "Kalyan Homeo Care is led by Founder & Chief Physician Dr. Ch. Ravi Kumar, M.D. (17+ years experience) alongside Senior Consultant Dr. Sudhakar, M.D. (14+ years experience) and Consultant Homeopath Dr. Shweta, BHMS (10+ years experience). Together they provide comprehensive constitutional care for all age groups across our Visakhapatnam branches.",
     category: "Doctors"
   }
 ];

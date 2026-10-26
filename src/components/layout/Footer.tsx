@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-xs text-mint/80 leading-relaxed">
-              Personalized homeopathic care led by <strong className="text-white font-semibold">Dr. Ch. Ravi Kumar, M.D.</strong> alongside senior physicians <strong className="text-white font-semibold">Dr. Sudhakar, M.D.</strong> and <strong className="text-white font-semibold">Dr. Shweta, M.D.</strong>. Serving local families across Visakhapatnam with dedicated clinical listening and gentle remedies.
+              Personalized homeopathic care led by <strong className="text-white font-semibold">Dr. Ch. Ravi Kumar, M.D.</strong> alongside senior physicians <strong className="text-white font-semibold">Dr. Sudhakar, M.D.</strong> and <strong className="text-white font-semibold">Dr. Shweta, BHMS</strong>. Serving local families across Visakhapatnam with dedicated clinical listening and gentle remedies.
             </p>
 
             <div className="pt-2 flex items-center gap-3">
